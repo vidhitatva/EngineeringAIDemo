@@ -27,12 +27,4 @@ class UserController {
             }
         }
     }
-    
-    static public func getUserImage(user : Users, image:@escaping(_ image : Data) -> Void) {
-        RequestManager.downloadingImage(url: user.image ?? "") { (status, resImage) in
-            if status {
-                image(resImage)
-            }
-        }
-    }
 }

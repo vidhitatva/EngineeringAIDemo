@@ -18,7 +18,7 @@ struct Request {
 
 class RequestManager {
     
-    static public func requestWithGET(with url : String,complition : @escaping(_ status : Bool,_ responseData : Data,_ message : String) -> Void) {
+    static func requestWithGET(with url : String,complition : @escaping(_ status : Bool,_ responseData : Data,_ message : String) -> Void) {
         let req = self.createbody(url: url, method: .get, header: self.basicHeader, paramters: [:])
         self.sendRequest(request: req) { (status, result,message) in
             complition(status, result,message)
@@ -51,19 +51,5 @@ class RequestManager {
         return headers
     }
     
-    static public func downloadingImage(url:String,complition:@escaping(_ status:Bool,_ image:Data) -> Void) {
-        Alamofire.request(url).responseData { (image) in
-            DispatchQueue.main.async {
-                switch image.result {
-                case .success:
-                    complition(true,image.result.value ?? Data())
-                    break
-                case .failure:
-                    complition(false,Data())
-                    break
-                }
-            }
-        }
-    }
     
 }
