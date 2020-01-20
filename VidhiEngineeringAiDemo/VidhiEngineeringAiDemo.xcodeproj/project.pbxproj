@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C53D34023D5D0B000C96CBB /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C53D33F23D5D0B000C96CBB /* LayoutView.swift */; };
 		1CEE86CA23D5AD4C00C8ED8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE86C923D5AD4C00C8ED8C /* AppDelegate.swift */; };
-		1CEE86CC23D5AD4C00C8ED8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE86CB23D5AD4C00C8ED8C /* ViewController.swift */; };
 		1CEE86CF23D5AD4C00C8ED8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEE86CD23D5AD4C00C8ED8C /* Main.storyboard */; };
 		1CEE86D123D5AD4D00C8ED8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CEE86D023D5AD4D00C8ED8C /* Assets.xcassets */; };
 		1CEE86D423D5AD4D00C8ED8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEE86D223D5AD4D00C8ED8C /* LaunchScreen.storyboard */; };
@@ -25,9 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C53D33F23D5D0B000C96CBB /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
 		1CEE86C623D5AD4C00C8ED8C /* VidhiEngineeringAiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VidhiEngineeringAiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEE86C923D5AD4C00C8ED8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CEE86CB23D5AD4C00C8ED8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1CEE86CE23D5AD4C00C8ED8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CEE86D023D5AD4D00C8ED8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CEE86D323D5AD4D00C8ED8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C53D33E23D5D09100C96CBB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1C53D33F23D5D0B000C96CBB /* LayoutView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		1CEE86BD23D5AD4C00C8ED8C = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +87,13 @@
 		1CEE86C823D5AD4C00C8ED8C /* VidhiEngineeringAiDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1C53D33E23D5D09100C96CBB /* Classes */,
 				1CEE86EB23D5AEC200C8ED8C /* CustomCell */,
 				1CEE86E823D5AEA300C8ED8C /* Model */,
 				1CEE86E523D5AE8700C8ED8C /* Controller */,
 				1CEE86E223D5AE6100C8ED8C /* Networking */,
 				1CEE86DF23D5AE3800C8ED8C /* ViewController */,
 				1CEE86DB23D5AE0B00C8ED8C /* Application */,
-				1CEE86CB23D5AD4C00C8ED8C /* ViewController.swift */,
 				1CEE86CD23D5AD4C00C8ED8C /* Main.storyboard */,
 				1CEE86D023D5AD4D00C8ED8C /* Assets.xcassets */,
 				1CEE86D223D5AD4D00C8ED8C /* LaunchScreen.storyboard */,
@@ -282,7 +290,7 @@
 			files = (
 				1CEE86E723D5AE9E00C8ED8C /* UserController.swift in Sources */,
 				1CEE86E423D5AE7800C8ED8C /* RequestManager.swift in Sources */,
-				1CEE86CC23D5AD4C00C8ED8C /* ViewController.swift in Sources */,
+				1C53D34023D5D0B000C96CBB /* LayoutView.swift in Sources */,
 				1CEE86CA23D5AD4C00C8ED8C /* AppDelegate.swift in Sources */,
 				1CEE86DD23D5AE2200C8ED8C /* Constant.swift in Sources */,
 				1CEE86EE23D5AEF300C8ED8C /* UserTableCell.swift in Sources */,

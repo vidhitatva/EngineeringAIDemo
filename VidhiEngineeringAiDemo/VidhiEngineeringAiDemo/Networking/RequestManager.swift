@@ -30,8 +30,6 @@ class RequestManager {
             DispatchQueue.main.async {
                 switch response.result {
                 case .success:
-                        let responseStr = String(data: response.result.value!, encoding: .utf8)
-                        print(responseStr)
                         complition(true,response.result.value ?? Data(),"");
                     break
                 case .failure:

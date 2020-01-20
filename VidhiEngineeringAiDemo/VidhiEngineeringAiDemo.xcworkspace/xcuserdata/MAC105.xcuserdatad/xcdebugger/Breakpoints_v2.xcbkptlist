@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VidhiEngineeringAiDemo/ViewController/HomeViewController.swift"
+            timestampString = "601216040.914664"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VidhiEngineeringAiDemo/CustomCell/UserTableCell.swift"
+            timestampString = "601216040.9151649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VidhiEngineeringAiDemo/CustomCell/UserTableCell.swift"
+            timestampString = "601216040.915243"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VidhiEngineeringAiDemo/CustomCell/UserTableCell.swift"
+            timestampString = "601216040.915313"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "user"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VidhiEngineeringAiDemo/CustomCell/UserTableCell.swift"
+            timestampString = "601216040.915381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "user"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VidhiEngineeringAiDemo.UserTableCell.user.didset : Swift.Optional&lt;VidhiEngineeringAiDemo.Users&gt;"
+                  moduleName = "VidhiEngineeringAiDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MAC105/Documents/EngineeringAIDemo1/VidhiEngineeringAiDemo/VidhiEngineeringAiDemo/CustomCell/UserTableCell.swift"
+                  timestampString = "601214762.482658"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "979">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in VidhiEngineeringAiDemo.UserTableCell.user.didset : Swift.Optional&lt;VidhiEngineeringAiDemo.Users&gt;"
+                  moduleName = "VidhiEngineeringAiDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MAC105/Documents/EngineeringAIDemo1/VidhiEngineeringAiDemo/VidhiEngineeringAiDemo/CustomCell/UserTableCell.swift"
+                  timestampString = "601214762.4869519"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "292">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VidhiEngineeringAiDemo/CustomCell/ImageCollectionCell.swift"
+            timestampString = "601216040.915451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "imageStr"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VidhiEngineeringAiDemo.ImageCollectionCell.imageStr.didset : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "VidhiEngineeringAiDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MAC105/Documents/EngineeringAIDemo1/VidhiEngineeringAiDemo/VidhiEngineeringAiDemo/CustomCell/ImageCollectionCell.swift"
+                  timestampString = "601214772.131454"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in VidhiEngineeringAiDemo.ImageCollectionCell.imageStr.didset : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "VidhiEngineeringAiDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/MAC105/Documents/EngineeringAIDemo1/VidhiEngineeringAiDemo/VidhiEngineeringAiDemo/CustomCell/ImageCollectionCell.swift"
+                  timestampString = "601214772.134298"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

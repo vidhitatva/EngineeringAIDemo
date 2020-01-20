@@ -9,10 +9,18 @@
 import UIKit
 
 class ImageCollectionCell: UICollectionViewCell {
-
+    
+    @IBOutlet private weak var imageViewUser: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    var imageStr : String? {
+        didSet {
+            self.imageViewUser.sd_setImage(with: URL(string: imageStr!)) { (image, error, type, url) in
+            }
+        }
+    }
 }
