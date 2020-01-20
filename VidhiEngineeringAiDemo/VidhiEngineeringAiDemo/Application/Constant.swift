@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+let BASEURL : String = "https://sd2-hiring.herokuapp.com/api/"
+
+struct API {
+    static func getUsers(offset : Int,limit : Int) -> String {
+        return BASEURL+"users?offset=\(offset)&limit=\(limit)"
+    }
+}

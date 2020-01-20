@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+class UserController {
+    static func getUserWith(offset : Int,complition : @escaping(_ hasMore : Bool,_ user : [Users]) -> Void) {
+        RequestManager.requestWithGET(with: API.getUsers(offset: offset, limit: 10)) { (status, responsedata, message) in
+            if status {
+                do {
+                    let userResponse = try JSONDecoder().decode(UserResponse.self, from: responsedata)
+                    if let users = userResponse.data?.users {
+                        complition(userResponse.data?.has_more ?? false,users)
+                    }else {
+                        complition(false,[])
+                    }
+                }catch {
+                    print("Error \(error.localizedDescription)")
+                }
+            }else {
+                complition(false,[])
+            }
+        }
+    }
+    
+    static public func getUserImage(user : Users, image:@escaping(_ image : Data) -> Void) {
+        RequestManager.downloadingImage(url: user.image ?? "") { (status, resImage) in
+            if status {
+                image(resImage)
+            }
+        }
+    }
+}
