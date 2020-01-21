@@ -33,6 +33,9 @@ class HomeViewController: UIViewController {
         self.collectionViewUserList.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView")
         self.collectionViewUserList.addInfiniteScroll { (collection) in
             collection.finishInfiniteScroll()
+            if self.hasMore && !self.isWSLoading{
+                self.getUserList(with: self.arrayUserList.count)
+            }
         }
     }
     
@@ -87,9 +90,6 @@ extension HomeViewController : UICollectionViewDataSource,UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionCell", for: indexPath) as! ImageCollectionCell
         cell.imageStr = self.arrayUserList[indexPath.section].items?[indexPath.row]
-//        if self.hasMore && indexPath.section == self.arrayUserList.count - 1 && !self.isWSLoading{
-//            self.getUserList(with: self.arrayUserList.count)
-//        }
         return cell
     }
     

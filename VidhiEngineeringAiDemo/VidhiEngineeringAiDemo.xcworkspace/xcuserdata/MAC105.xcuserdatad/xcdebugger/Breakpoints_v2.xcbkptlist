@@ -65,38 +65,6 @@
             endingLineNumber = "36"
             landmarkName = "user"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VidhiEngineeringAiDemo.UserTableCell.user.didset : Swift.Optional&lt;VidhiEngineeringAiDemo.Users&gt;"
-                  moduleName = "VidhiEngineeringAiDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MAC105/Documents/EngineeringAIDemo1/VidhiEngineeringAiDemo/VidhiEngineeringAiDemo/CustomCell/UserTableCell.swift"
-                  timestampString = "601304446.616441"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "979">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in VidhiEngineeringAiDemo.UserTableCell.user.didset : Swift.Optional&lt;VidhiEngineeringAiDemo.Users&gt;"
-                  moduleName = "VidhiEngineeringAiDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/MAC105/Documents/EngineeringAIDemo1/VidhiEngineeringAiDemo/VidhiEngineeringAiDemo/CustomCell/UserTableCell.swift"
-                  timestampString = "601304446.620024"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "292">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
