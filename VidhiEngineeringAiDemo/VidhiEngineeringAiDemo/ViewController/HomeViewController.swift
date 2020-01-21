@@ -7,74 +7,109 @@
 //
 
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class HomeViewController: UIViewController {
 
     //MARK: - Outlet
     
-    @IBOutlet private weak var tableViewUserList : UITableView!
-    @IBOutlet private weak var viewLoadingFooter : UIView!
+    @IBOutlet private weak var collectionViewUserList: UICollectionView!
+   
     //MARK: Variable
-    
     private var arrayUserList  : [Users] = []
     private var hasMore : Bool = false
+    private var isWSLoading : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUpUIElements()
+        
+        self.prepareView()
         self.getUserList()
         // Do any additional setup after loading the view.
     }
     
-    func setUpUIElements() {
-        self.tableViewUserList.tableFooterView = self.viewLoadingFooter
+    func prepareView() {
+        self.collectionViewUserList.register(UINib(nibName: "ImageCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionCell")
+        self.collectionViewUserList.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView")
+        self.collectionViewUserList.addInfiniteScroll { (collection) in
+            collection.finishInfiniteScroll()
+        }
     }
     
     func getUserList(with offset : Int = 0) {
+        self.isWSLoading = true
         UserController.getUserWith(offset: offset) { (hasmore, users) in
+            self.isWSLoading = false
             self.arrayUserList.append(contentsOf: users)
             self.hasMore = hasmore
-            self.tableViewUserList.reloadData()
+            self.collectionViewUserList.reloadData()
             if !self.hasMore {
-                self.tableViewUserList.tableFooterView = nil
+                self.collectionViewUserList.removeInfiniteScroll()
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension HomeViewController : UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.arrayUserList.count
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UserTableCell.cell
-        cell.user = self.arrayUserList[indexPath.row]
-        if self.hasMore && indexPath.row == self.arrayUserList.count - 1 {
-            self.getUserList(with: self.arrayUserList.count)
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard
+                let headerView = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind,
+                    withReuseIdentifier: "HeaderCollectionReusableView",
+                    for: indexPath) as? HeaderCollectionReusableView
+                else {
+                    fatalError("Invalid view type")
+            }
+            headerView.user = self.arrayUserList[indexPath.section]
+            return headerView
+        default:
+            assert(false, "Invalid element type")
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: 70)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let items = self.arrayUserList[section].items {
+            return items.count
+        }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionCell", for: indexPath) as! ImageCollectionCell
+        cell.imageStr = self.arrayUserList[indexPath.section].items?[indexPath.row]
+//        if self.hasMore && indexPath.section == self.arrayUserList.count - 1 && !self.isWSLoading{
+//            self.getUserList(with: self.arrayUserList.count)
+//        }
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let arrayItem = self.arrayUserList[indexPath.row].items
-        if arrayItem!.count % 2 == 0 {
-            let height = (arrayItem!.count / 2) * Int(tableView.frame.width / 2)
-            return CGFloat(height + 60)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if self.arrayUserList[indexPath.section].items!.count % 2 == 0 {
+            let width = (collectionView.frame.size.width - 20)/2 - 5
+            return CGSize(width: width, height: width)
         }else {
-            let height = (arrayItem!.count / 2) * Int(tableView.frame.width / 2)
-            return CGFloat(height + 60) + tableView.frame.width
+            if indexPath.row == 0 {
+                return CGSize(width: collectionView.frame.size.width - 20, height: collectionView.frame.size.width - 20)
+            }else {
+                let width = (collectionView.frame.size.width - 20)/2 - 5
+                return CGSize(width: width, height: width)
+            }
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    }
+    
 }
+

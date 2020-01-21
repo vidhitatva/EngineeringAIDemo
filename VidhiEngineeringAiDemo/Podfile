@@ -7,5 +7,6 @@ target 'VidhiEngineeringAiDemo' do
 
   # Pods for VidhiEngineeringAiDemo
  pod 'Alamofire'
- pod 'SDWebImage' 
+ pod 'SDWebImage'
+ pod 'UIScrollView-InfiniteScroll'
 end
